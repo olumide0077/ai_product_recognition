@@ -18,7 +18,13 @@ tasks.register("clean", Delete) {
 }
 
 buildscript {
+    repositories {
+        google()        // Ensure this is present
+        mavenCentral()  // This too
+        jcenter()       // Optional, but can be useful in some cases
+    }
     dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
         classpath 'com.google.gms:google-services:4.3.15'  // Ensure this is present
     }
 }
